@@ -40,12 +40,13 @@
 
 
 ### Home Page:
-![Screenshot (11)](https://github.com/deepsanghani/currency_converter/assets/59606437/e53967d0-5268-436a-a1d8-276bd60743aa)
+![Screenshot (10)](https://github.com/deepsanghani/currency_converter/assets/59606437/be8a8557-af26-466d-8291-c9a6211b4e39)
 
 
 - Whenever user clicks on submit button data gets added to mysql database - Table name - events with timestamp
   ![Screenshot (9)](https://github.com/deepsanghani/currency_converter/assets/59606437/931703f0-fc49-41d3-a18d-8a3b085ae36c)
 
-![Screenshot (10)](https://github.com/deepsanghani/currency_converter/assets/59606437/be8a8557-af26-466d-8291-c9a6211b4e39)
+  ![Screenshot (11)](https://github.com/deepsanghani/currency_converter/assets/59606437/e53967d0-5268-436a-a1d8-276bd60743aa)
+
 
 
