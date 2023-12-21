@@ -9,6 +9,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.conf import settings
 from django.http import HttpResponseRedirect
 from currency_converter.models import EventInsert
+from difflib import SequenceMatcher
 
 
 def indexpage(request):
@@ -58,15 +59,14 @@ def logout_request(request):
 
 
 def insertRecord(request):
-    if request.method=='POST':
-        if request.POST.get('from_currency') and request.POST.get('target_currency') and request.POST.get('from_price') and request.POST.get('target_price'):
-            saveRecord = EventInsert()
-            saveRecord.from_currency = request.POST.get('from_currency')
-            saveRecord.target_currency = request.POST.get('target_currency')
-            saveRecord.from_price = request.POST.get('from_price')
-            saveRecord.target_price = request.POST.get('target_price')
-            saveRecord.save()
-            messages.success(request,' Record Added successfully')
-            return render(request, "index.html",{})
+    if request.POST.get('from_currency') and request.POST.get('target_currency') and request.POST.get('from_price') and request.POST.get('target_price'):
+        saveRecord = EventInsert()
+        saveRecord.from_currency = request.POST.get('from_currency')
+        saveRecord.target_currency = request.POST.get('target_currency')
+        saveRecord.from_price = request.POST.get('from_price')
+        saveRecord.target_price = request.POST.get('target_price')
+        saveRecord.save()
+        messages.success(request,' Record Added successfully')
+        return render(request, "index.html",{})
     else:
         return render(request, "index.html",{})

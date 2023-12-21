@@ -25,7 +25,7 @@ app_name = "app"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.indexpage, name="indexpage"),
+    path('', views.insertRecord, name="indexpage"),
     path("login", views.login_request, name="login"),
     path("register", views.register_request, name="register"),
     path("logout/", views.logout_request, name= "logout")
