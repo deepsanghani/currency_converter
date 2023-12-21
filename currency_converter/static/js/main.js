@@ -23,7 +23,7 @@ function calculate() {
       theRate.innerText = `1 ${curr1} = ${rate} ${curr2}`;
       amount2.value = (amount1.value * rate).toFixed(2);
     });
-
+    console.log(amount1.value + " " + amount2.value)
 }
 
 // Event  Listeners
@@ -31,9 +31,3 @@ c1.addEventListener("change", calculate);
 amount1.addEventListener("input", calculate);
 c2.addEventListener("change", calculate);
 amount2.addEventListener("input", calculate);
-swap.addEventListener("click", () => {
-  const flash = c1.value;
-  c1.value = c2.value;
-  c2.value = flash;
-  calculate();
-});
