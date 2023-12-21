@@ -10,6 +10,7 @@
 - pip install django-crispy-forms
 - pip install django-messages
 - pip install crispy-bootstrap5
+- pip install mysqlclient
 
 ### To accessing admin side of the project following steps are required:
 - run python manage.py createsuperuser
@@ -29,13 +30,20 @@
 
 
 ### Login Page:
-![Screenshot (5)](https://github.com/deepsanghani/currency_converter/assets/59606437/d64e989e-08e0-4796-8695-fe0ba52791dd)
+![Screenshot (5)](https://github.com/deepsanghani/currency_converter/assets/59606437/eddfb878-4f48-4495-b7d6-770c21ed8041)
+
 
 ### Register Page:
-![Screenshot (6)](https://github.com/deepsanghani/currency_converter/assets/59606437/7a0314cd-7749-4642-950e-afec7d678b09)
+![Screenshot (6)](https://github.com/deepsanghani/currency_converter/assets/59606437/f67ca2af-9069-4ab9-a19a-0e5304a39563)
 
-![Screenshot (7)](https://github.com/deepsanghani/currency_converter/assets/59606437/264d100f-f1e7-460e-8df6-3cea4e04c08e)
+![Screenshot (7)](https://github.com/deepsanghani/currency_converter/assets/59606437/70afd45e-856c-4c2d-85f3-c4b897ac2442)
+
 
 ### Home Page:
-![Screenshot (8)](https://github.com/deepsanghani/currency_converter/assets/59606437/aa009e71-4510-4718-81f0-f93820882c4f)
+![Screenshot (10)](https://github.com/deepsanghani/currency_converter/assets/59606437/be8a8557-af26-466d-8291-c9a6211b4e39)
+
+- Whenever user clicks on submit button data gets added to mysql database - Table name - events with timestamp
+  ![Screenshot (9)](https://github.com/deepsanghani/currency_converter/assets/59606437/931703f0-fc49-41d3-a18d-8a3b085ae36c)
+
+
 
