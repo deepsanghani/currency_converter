@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}      
+
+{% load crispy_forms_tags %}
+
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      {% if message.tags == 'error' %}
+        <div class="alert alert-danger" style="width: 97%;"><div class="close" data-dismiss="alert" onclick="this.parentElement.remove();">×</div>{{ message }}</div>
+      {% else %}
+        <div {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %} style="width: 97%;"><div class="close" data-dismiss="alert" onclick="this.parentElement.remove();">×</div>{{ message }}</div>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}
+
+<!--Login--> 
+<div class="container py-5">
+  <h1>Login</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ login_form|crispy }}
+    <button class="btn btn-primary" type="submit">Login</button>
+  </form>
+  <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
+</div>
+
+{% endblock %}
